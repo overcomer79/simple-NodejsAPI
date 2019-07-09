@@ -1,16 +1,13 @@
 const express = require('express');
-const app = express();
-
 const bodyParser = require('body-parser');
 
-/**
- * ROUTING SETTINGS
- */
+// Importing routing settings
 const customersRoutes = require('./api/routes/customers');
 
-/**
- * MIDDLEWARES
- */
+// Express app initialization
+const app = express();
+
+// Middleware configuration
 app.use(bodyParser.json());
 app.use('/customers', customersRoutes);
 
